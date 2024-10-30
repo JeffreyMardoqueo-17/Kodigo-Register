@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "username": "nuevo_usuario",
+    "password": "$2a$10$HvsLw7fuW0c6WMkaECEtQ.b52Ecx4Ucrrw2cZeXPb1TbGGaDRKNBG"
+  },
+  {
+    "id": 2,
+    "username": "test_user",
+    "password": "$2a$10$NE0mccV8FciLRXWFM1W/eeTtyce/obTqSgVQu90qiSrBDhhM2xjry"
+  },
+  {
+    "id": 3,
+    "username": "jeffrey@gmail.com",
+    "password": "$2a$10$IOHOI2yUDzgcMLMOYOQ98uh7hYoOyoGXLaMy4txoYL/isk24CQ8Ym"
+  },
+  {
+    "id": 4,
+    "username": "mardoqueo@gmail.com",
+    "password": "$2a$10$Y.zHRancXoxQ6vAtUabcDe0ZCI/d1rj40Osyj/TJ2GGPqfCJTQJJm"
+  }
+]
