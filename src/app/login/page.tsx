@@ -22,13 +22,13 @@ export default function LoginPage() {
             if (response.ok) {
                 // Guardar el token en localStorage
                 localStorage.setItem('token', data.token);
-                // Redirigir al dashboard si el login es exitoso
-                router.push('/dashboard');
+                // Redirigir al dashboard si el login es exitoso osea al de bootcamp el dashboard
+                router.push('/bootcamp');
             } else {
                 setError(data.message || 'Error al iniciar sesión');
             }
         } catch (err) {
-            setError('Error al iniciar sesión');
+            setError('Error al iniciar sesión' + err);
         }
     };
 
