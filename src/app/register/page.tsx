@@ -24,7 +24,7 @@ export default function RegisterPage() {
                 setError(data.message || 'Error en el registro');
             }
         } catch (err) {
-            setError('Error en el registro');
+            setError('Error en el registro' + err);
         }
     };
 

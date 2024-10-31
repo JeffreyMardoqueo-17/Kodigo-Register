@@ -1,5 +1,5 @@
-"use client";
-import type { Metadata } from 'next';
+"use client"
+
 import localFont from 'next/font/local';
 import './globals.css';
 import { useRouter, usePathname } from 'next/navigation';
@@ -26,13 +26,9 @@ export default function RootLayout({
   const pathname = usePathname();
 
   useEffect(() => {
-    // Verificar si el token existe en localStorage
     const token = localStorage.getItem('token');
-
-    // Definir las rutas públicas (sin necesidad de autenticación)
     const publicRoutes = ['/', '/login', '/register'];
 
-    // Redirigir al login si intenta acceder a rutas protegidas sin token
     if (!token && pathname && !publicRoutes.includes(pathname)) {
       router.replace('/login');
     }
@@ -40,7 +36,8 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} `}>
+      
         {children}
       </body>
     </html>

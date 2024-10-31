@@ -18,5 +18,10 @@
     "id": 4,
     "username": "mardoqueo@gmail.com",
     "password": "$2a$10$Y.zHRancXoxQ6vAtUabcDe0ZCI/d1rj40Osyj/TJ2GGPqfCJTQJJm"
+  },
+  {
+    "id": 5,
+    "username": "prueba@gmail.com",
+    "password": "$2a$10$lnLgstGzb.p28z1on43WkOgkeMNnMfB/0RGYEtMGH2HgZrl050osW"
   }
 ]

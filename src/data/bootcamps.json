@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Java Developer",
+    "name": "Java Developer editado",
     "description": "Aprende Java desde cero hasta un nivel avanzado, incluyendo el desarrollo de aplicaciones backend robustas.",
     "technologies": [
       "Java",
@@ -29,6 +29,25 @@
       "Python",
       "PowerBI",
       "R"
+    ],
+    "active": true
+  },
+  {
+    "id": 4,
+    "name": "NO Lo se",
+    "description": "Esto es una prueba",
+    "technologies": [
+      "react",
+      "nextjs"
+    ],
+    "active": false
+  },
+  {
+    "id": 5,
+    "name": "Nos volveremos full Stack en 2 días ",
+    "description": "Sos un proo",
+    "technologies": [
+      "Java"
     ],
     "active": true
   }
