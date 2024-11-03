@@ -48,7 +48,7 @@ function EditBootcampPage() {
             alert('Bootcamp actualizado correctamente');
             router.push('/bootcamp');
         } catch (err) {
-            setError('Error al actualizar el bootcamp');
+            setError('Error al actualizar el bootcamp' + err);
         }
     };
 

@@ -28,7 +28,7 @@ function CreateBootcampPage() {
             alert('Bootcamp creado correctamente');
             router.push('/bootcamp');
         } catch (err) {
-            setError('Error al crear el bootcamp');
+            setError('Error al crear el bootcamp' + err);
         }
     };
 

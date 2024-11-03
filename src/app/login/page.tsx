@@ -1,7 +1,7 @@
 'use client';
-
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export default function LoginPage() {
     const [username, setUsername] = useState('');
@@ -20,9 +20,7 @@ export default function LoginPage() {
             const data = await response.json();
 
             if (response.ok) {
-                // Guardar el token en localStorage
                 localStorage.setItem('token', data.token);
-                // Redirigir al dashboard si el login es exitoso osea al de bootcamp el dashboard
                 router.push('/bootcamp');
             } else {
                 setError(data.message || 'Error al iniciar sesión');
@@ -40,9 +38,11 @@ export default function LoginPage() {
         <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-700 via-purple-800 to-gray-900">
             <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
                 <div className="text-center mb-6">
-                    <img
+                    <Image
                         src="https://academy.kodigo.org/pluginfile.php/1/theme_moove/logo/1717596360/logo.png"
                         alt="Kodigo Logo"
+                        width={128} // Especifica el ancho de la imagen
+                        height={128} // Especifica la altura de la imagen
                         className="w-32 mx-auto mb-4"
                     />
                     <h2 className="text-3xl font-bold text-gray-800">Iniciar Sesión</h2>

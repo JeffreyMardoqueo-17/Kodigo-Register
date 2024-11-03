@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 import SimpleCard from '@/components/SimpleCard';
 
 interface Bootcamp {
@@ -15,7 +15,7 @@ interface Bootcamp {
 const BootcampsPage = () => {
     const [bootcamps, setBootcamps] = useState<Bootcamp[]>([]);
     const [error, setError] = useState('');
-    const router = useRouter();
+    // const router = useRouter();
 
     useEffect(() => {
         const fetchBootcamps = async () => {
