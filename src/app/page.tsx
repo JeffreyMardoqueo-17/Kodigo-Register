@@ -5,14 +5,15 @@ import StatsCard from '@/components/StatsCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import { FaUser, FaTrophy, FaLaptop, FaRocket } from 'react-icons/fa';
 import Navbar from '@/components/Navbar';
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <div className="bg-white text-gray-800 min-h-screen p-8 w-full">
-        {/* Hero Section */}
-        <section className="w-full  mb-3 mx-auto min-h-screen p-8 lg:p-16 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12 bg-gradient-to-r from-purple-700 via-purple-800 to-orange-500 text-white">
+
+        <section className="w-full mb-3 mx-auto min-h-screen p-8 lg:p-16 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12 bg-gradient-to-r from-purple-700 via-purple-800 to-orange-500 text-white">
           <div className="lg:w-1/2 space-y-6">
             <h1 className="text-5xl lg:text-7xl font-bold ">
               Transforma tu pasión <br />
@@ -27,13 +28,12 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 gap-4 lg:gap-6 lg:w-1/2">
-            <img src="https://st2.depositphotos.com/1017228/9855/i/450/depositphotos_98555688-stock-photo-thoughtful-programmer-coding-in-the.jpg" alt="Tech Career" className="w-full h-44 lg:h-52 object-cover rounded-lg shadow-lg" />
-            <img src="https://st3.depositphotos.com/5392356/14145/i/450/depositphotos_141456724-stock-photo-business-people-in-office.jpg" alt="Tech Career" className="w-full h-44 lg:h-52 object-cover rounded-lg shadow-lg" />
-            <img src="https://www.azulweb.net/wp-content/uploads/2020/01/aprende-a-programar.png" alt="Tech Career" className="w-full h-44 lg:h-52 object-cover rounded-lg shadow-lg" />
-            <img src="https://img.freepik.com/fotos-premium/gente-negocios-reunida-planificando-lluvia-ideas-estrategica-o-programando-sala-juntas-grupo-trabajadores-empleados-compartiendo-ideas-plan-proyecto-discusion-equipo-o-colaboracion-oficina_590464-158797.jpg" alt="Tech Career" className="w-full h-44 lg:h-52 object-cover rounded-lg shadow-lg" />
+            <Image src="https://st2.depositphotos.com/1017228/9855/i/450/depositphotos_98555688-stock-photo-thoughtful-programmer-coding-in-the.jpg" alt="Tech Career" width={500} height={300} className="w-full h-44 lg:h-52 object-cover rounded-lg shadow-lg" />
+            <Image src="https://st3.depositphotos.com/5392356/14145/i/450/depositphotos_141456724-stock-photo-business-people-in-office.jpg" alt="Tech Career" width={500} height={300} className="w-full h-44 lg:h-52 object-cover rounded-lg shadow-lg" />
+            <Image src="https://www.azulweb.net/wp-content/uploads/2020/01/aprende-a-programar.png" alt="Tech Career" width={500} height={300} className="w-full h-44 lg:h-52 object-cover rounded-lg shadow-lg" />
+            <Image src="https://img.freepik.com/fotos-premium/gente-negocios-reunida-planificando-lluvia-ideas-estrategica-o-programando-sala-juntas-grupo-trabajadores-empleados-compartiendo-ideas-plan-proyecto-discusion-equipo-o-colaboracion-oficina_590464-158797.jpg" alt="Tech Career" width={500} height={300} className="w-full h-44 lg:h-52 object-cover rounded-lg shadow-lg" />
           </div>
         </section>
-
 
         {/* Stats Section */}
         <section className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center mb-12">
@@ -91,6 +91,5 @@ export default function Home() {
         </section>
       </div>
     </>
-
   );
 }

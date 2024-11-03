@@ -7,7 +7,14 @@ import path from 'path';
 const usersFilePath = path.resolve('./src/data/users.json');
 const SECRET_KEY = process.env.SECRET_KEY || 'mysecretkey';
 
-const readUsersFromFile = () => {
+// Define el tipo de usuario
+interface User {
+    id: number;
+    username: string;
+    password: string;
+}
+
+const readUsersFromFile = (): User[] => {
     const data = fs.readFileSync(usersFilePath, 'utf-8');
     return JSON.parse(data);
 };
@@ -17,7 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const { username, password } = req.body;
 
         const users = readUsersFromFile();
-        const user = users.find((user: any) => user.username === username);
+        const user = users.find((user: User) => user.username === username);
 
         if (!user) {
             return res.status(400).json({ message: 'Credenciales inválidas' });

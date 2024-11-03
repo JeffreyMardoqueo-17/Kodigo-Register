@@ -1,6 +1,6 @@
 'use client';
 
-import { FaTools, FaEye } from 'react-icons/fa';
+import { FaTools } from 'react-icons/fa';
 
 interface SimpleCardProps {
     id: number;

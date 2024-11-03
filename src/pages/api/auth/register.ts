@@ -5,14 +5,18 @@ import path from 'path';
 
 const usersFilePath = path.resolve('./src/data/users.json');
 
-//  para leer usuarios desde el archivo JSON
-const readUsersFromFile = () => {
+interface User {
+    id: number;
+    username: string;
+    password: string;
+}
+
+const readUsersFromFile = (): User[] => {
     const data = fs.readFileSync(usersFilePath, 'utf-8');
     return JSON.parse(data);
 };
 
-//  para guardar usuarios en el archivo JSON
-const saveUsersToFile = (users: any) => {
+const saveUsersToFile = (users: User[]) => {
     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
 };
 
@@ -24,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const users = readUsersFromFile();
 
         // Verificar si el usuario ya existe
-        const userExists = users.find((user: any) => user.username === username);
+        const userExists = users.find((user: User) => user.username === username);
         if (userExists) {
             return res.status(400).json({ message: 'El usuario ya existe' });
         }
@@ -33,7 +37,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const hashedPassword = await bcrypt.hash(password, 10);
 
         // Crear el nuevo usuario
-        const newUser = { id: users.length + 1, username, password: hashedPassword };
+        const newUser: User = { id: users.length + 1, username, password: hashedPassword };
         users.push(newUser);
 
         // Guardar usuarios en el archivo
